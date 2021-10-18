@@ -29,3 +29,7 @@ update AddressBookTable set LastName='Gates' where FirstName='Ana';
 update AddressBookTable set EmailId='rst123@gmail.com' where LastName='Futterkiste';
 update AddressBookTable set ZipCode='751185' where FirstName='Thomas';
 select * from AddressBookTable;
+
+--UC-5: Deleting a person's details from the current address book
+delete from AddressBookTable where FirstName='Ana';
+select * from AddressBookTable;
