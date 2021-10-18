@@ -36,3 +36,6 @@ select * from AddressBookTable;
 
 --UC-6: Retrieving a person belonging to a city or state from the address book
 select FirstName from AddressBookTable where City='Mexico' or StateName='Germany';
+
+--UC-7: Ability to understand the size of address book by city and state
+Select Count(City) as Size,City,StateName from AddressBookTable group by StateName,City;
