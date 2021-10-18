@@ -33,3 +33,6 @@ select * from AddressBookTable;
 --UC-5: Deleting a person's details from the current address book
 delete from AddressBookTable where FirstName='Ana';
 select * from AddressBookTable;
+
+--UC-6: Retrieving a person belonging to a city or state from the address book
+select FirstName from AddressBookTable where City='Mexico' or StateName='Germany';
