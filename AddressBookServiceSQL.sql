@@ -22,3 +22,10 @@ insert into AddressBookTable values
 ('Antonio','Moreno','Mataderos 2312','London','England',761942,258721564,'xyz12@gmail.com'),
 ('Thomas','Hardy','120 Hanover Sq.','Lulea','Sweden',231042,458721564,'def12@gmail.com');
 select * from AddressBookTable;
+
+--UC-4: Editing existing contact in the address book
+update AddressBookTable set Phonenum=7845712874 where FirstName='Thomas';
+update AddressBookTable set LastName='Gates' where FirstName='Ana';
+update AddressBookTable set EmailId='rst123@gmail.com' where LastName='Futterkiste';
+update AddressBookTable set ZipCode='751185' where FirstName='Thomas';
+select * from AddressBookTable;
