@@ -42,3 +42,13 @@ Select Count(City) as Size,City,StateName from AddressBookTable group by StateNa
 
 --UC-8: Retrieving entries sorted alphabetically by person’s name for a given city
 select FirstName from AddressBookTable where City='Mexico' order by FirstName;
+
+--UC-9: Adding the new columns and adding the address book name and type
+alter table AddressBookTable add 
+AddressBookName varchar(50),
+Type varchar(50);
+select * from AddressBookTable;
+--Updating the table
+update AddressBookTable set AddressBookName='BestFriend',Type='Friend' where FirstName='Thomas';
+update AddressBookTable set AddressBookName='Daughter',Type='Family' where FirstName='Ana';
+update AddressBookTable set AddressBookName='CEO',Type='Profession' where FirstName='Antonio';
