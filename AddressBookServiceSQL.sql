@@ -52,3 +52,6 @@ select * from AddressBookTable;
 update AddressBookTable set AddressBookName='BestFriend',Type='Friend' where FirstName='Thomas';
 update AddressBookTable set AddressBookName='Daughter',Type='Family' where FirstName='Ana';
 update AddressBookTable set AddressBookName='CEO',Type='Profession' where FirstName='Antonio';
+
+--UC-10: Retrieve count by type
+select count(Type)as Count,Type  from AddressBookTable group by Type;
