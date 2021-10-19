@@ -39,3 +39,6 @@ select FirstName from AddressBookTable where City='Mexico' or StateName='Germany
 
 --UC-7: Ability to understand the size of address book by city and state
 Select Count(City) as Size,City,StateName from AddressBookTable group by StateName,City;
+
+--UC-8: Retrieving entries sorted alphabetically by person’s name for a given city
+select FirstName from AddressBookTable where City='Mexico' order by FirstName;
