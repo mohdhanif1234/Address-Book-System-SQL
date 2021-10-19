@@ -55,3 +55,7 @@ update AddressBookTable set AddressBookName='CEO',Type='Profession' where FirstN
 
 --UC-10: Retrieve count by type
 select count(Type)as Count,Type  from AddressBookTable group by Type;
+
+--UC-11: Inserting same contact as family and friend
+insert into AddressBookTable values('Alfreds','Futterkiste','Obere Str. 57','Berlin','Germany',764842,458721564,'abc12@gmail.com','CloseFriend','Friend');
+select * from AddressBookTable;
